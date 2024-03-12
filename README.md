@@ -1,16 +1,19 @@
-Courier Management System
-Features
-Login to the user's account.
-View all parcels.
-Create new parcels.
-Update existing parcels.
-Search parcels by recipient name, recipient phone, city, etc. (All available search query params are provided in the Postman collection).
-Users can view detailed information about a parcel on a separate screen.
-Additional Features
-Network status monitoring.
-Loading indicators.
-Custom launcher icon.
-Dependencies
+
+# Courier Management System
+# Feature
+1. Login to his/her account.
+2. See all the parcels.
+3. Create new parcels.
+4. Update the parcels.
+5. Search parcels by recipientName, recipientPhone, city etc. (All the available
+   search query params are given in the postman)
+6. Users can see details of a parcel on a separate screen.
+Additional
+7. Network checking
+8. Loader
+9. Launcher icon
+
+# Dependencies used
 get: ^4.6.1
 intl: ^0.19.0
 get_storage: ^2.0.3
@@ -43,10 +46,16 @@ tab_indicator_styler: ^2.0.0
 flutter_staggered_animations: ^1.0.0
 flutter_easyloading: ^3.0.5
 internet_connection_checker: ^1.0.0+1
-Technology
-This project is built using Flutter with Dart and state management handled by GetX.
 
-# Screenshot
-![Urella Logo](assets/images/urella_logo.png)
+# Technology:
+Flutter with Dart and state management GetX
 
-
+![Urella Logo](assets/images/Screenshot_20240312_122004.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_122021.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_122057.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_122146.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_122215.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_122820.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_123118.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_123257.png){:width="220" height="420"}
+![Urella Logo](assets/images/Screenshot_20240312_123303.png){:width="220" height="420"}
