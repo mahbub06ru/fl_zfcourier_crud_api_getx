@@ -6,14 +6,15 @@ import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_zfcourier_crud_api/styles/app_colors.dart';
 import 'package:flutter_zfcourier_crud_api/utils/app_binding.dart';
-import 'package:flutter_zfcourier_crud_api/views/screens/intro/splash_page.dart';
+import 'package:flutter_zfcourier_crud_api/views/screens/detail_screen.dart';
+import 'package:flutter_zfcourier_crud_api/views/screens/splash_page.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'animation/custom_animation.dart';
 import 'utils/constants.dart';
-import 'views/screens/home/home_page.dart';
-import 'views/screens/parcel_ceate_update_screen.dart';
+import 'views/screens/home_page.dart';
+import 'views/screens/ceate_update_screen.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -72,12 +73,12 @@ class MyApp extends StatelessWidget {
             bodyLarge:  TextStyle(
               fontSize: Utils.responsiveFontSize(20, context),
               fontFamily: 'Urbanist',
-              color: Color.fromRGBO(20, 51, 51, 1),
+              color: const Color.fromRGBO(20, 51, 51, 1),
             ),
             bodyMedium:  TextStyle(
               fontSize:Utils.responsiveFontSize(18, context),
               fontFamily: 'Urbanist',
-              color: Color.fromRGBO(20, 51, 51, 1),
+              color: const Color.fromRGBO(20, 51, 51, 1),
             ),
             bodySmall:  TextStyle(
               fontSize: Utils.responsiveFontSize(16, context),
@@ -106,8 +107,12 @@ class AppPages {
       page: () =>  const HomePage(),
     ),
     GetPage(
-      name: '/ParcelCreateUpdatePage',
-      page: () =>   ParcelCreateUpdatePage(),
+      name: '/CreateUpdatePage',
+      page: () =>   CreateUpdatePage(),
+    ),
+    GetPage(
+      name: '/DetailPage',
+      page: () =>   const DetailPage(),
     ),
 
 

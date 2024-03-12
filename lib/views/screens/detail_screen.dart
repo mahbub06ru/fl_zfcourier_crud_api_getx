@@ -2,16 +2,16 @@
 import 'package:flutter/material.dart';
 
 
-class ShopDetailScreen extends StatefulWidget {
-  const ShopDetailScreen({super.key});
+class DetailPage extends StatefulWidget {
+  const DetailPage({super.key});
 
   static String route() => '/shop_detail';
 
   @override
-  State<ShopDetailScreen> createState() => _ShopDetailScreenState();
+  State<DetailPage> createState() => _DetailPageState();
 }
 
-class _ShopDetailScreenState extends State<ShopDetailScreen> {
+class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {

@@ -13,7 +13,7 @@ import 'package:intl/intl.dart';
 
 import '../network/request.dart';
 import '../utils/constants.dart';
-import '../views/screens/home/home_page.dart';
+import '../views/screens/home_page.dart';
 
 class LoginController extends GetxController {
   RxBool loading = false.obs;
@@ -47,7 +47,7 @@ class LoginController extends GetxController {
     print("controller" + selectedRBItemOne.value.toString());
   }
 
-  TextEditingController? nameTextEditingController;
+  TextEditingController? phoneTextEditingController;
   TextEditingController? passwordTextEditingController ;
   String? userName;
   final storage = GetStorage();
@@ -55,21 +55,17 @@ class LoginController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    nameTextEditingController = TextEditingController();
+    phoneTextEditingController = TextEditingController();
     passwordTextEditingController = TextEditingController();
 
-    // checkVersion();
   }
 
-  void login(String id, String mobile) async {
+  void login() async {
     process(false);
     loading(true);
     Request request = Request(url: 'auth/login', body: {
-      // "user_code": idTextEditingController!.text,
-      "phone": '8801627561556',
-      // "password": passwordTextEditingController!.text,
-      "password": '123456',
-
+      "phone": phoneTextEditingController!.text,
+      "password": passwordTextEditingController!.text,
     });
     print(request.toString());
     request.post().then((response) {
@@ -125,7 +121,7 @@ class LoginController extends GetxController {
 
   @override
   void onClose() {
-    nameTextEditingController?.dispose();
+    phoneTextEditingController?.dispose();
     passwordTextEditingController?.dispose();
     super.onClose();
   }

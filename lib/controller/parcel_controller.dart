@@ -18,7 +18,7 @@ class ParcelController extends GetxController {
   RxList<OpenTraderList> openTrades = <OpenTraderList>[].obs;*/
   RxDouble totalProfit = 0.0.obs;
   final LoginController loginController = Get.find();
-
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   void showLoader() async {
     await EasyLoading.show(
       status: 'loading...',
@@ -275,6 +275,7 @@ class ParcelController extends GetxController {
   }
 
   Future<void> createParcel() async {
+    showLoader();
     const baseUrl = "https://demo.zfcourier.xyz/api/v/1.0.0/parcels/create";
     final authToken = loginController.userToken!.value;
     var amountToCollect = int.parse(amountToCollectController.text.trim());
@@ -317,19 +318,23 @@ class ParcelController extends GetxController {
 
       if (response.statusCode == 200) {
         showASuccessDialog('Success!','Parcel has been created successfully.');
+        EasyLoading.dismiss();
       } else {
         showASuccessDialog('Oops!','Server error.');
         // Handle server error
         print("Server error: ${response.statusCode}");
+        EasyLoading.dismiss();
         // You can show an error message to the user
       }
     } catch (e) {
       showASuccessDialog('Oops!',e.toString());
       print("Error: $e");
+      EasyLoading.dismiss();
       // You can show an error message to the user
     }
   }
   Future<void> updateParcel() async {
+    showLoader();
     const baseUrl = "https://demo.zfcourier.xyz/api/v/1.0.0/parcels/create";
     final authToken = loginController.userToken!.value;
     var amountToCollect = int.parse(amountToCollectController.text.trim());
@@ -372,15 +377,18 @@ class ParcelController extends GetxController {
 
       if (response.statusCode == 200) {
         showASuccessDialog('Success!','Parcel has been updated successfully.');
+        EasyLoading.dismiss();
       } else {
         showASuccessDialog('Oops!','Server error.');
         // Handle server error
         print("Server error: ${response.statusCode}");
+        EasyLoading.dismiss();
         // You can show an error message to the user
       }
     } catch (e) {
       showASuccessDialog('Oops!',e.toString());
       print("Error: $e");
+      EasyLoading.dismiss();
       // You can show an error message to the user
     }
   }
