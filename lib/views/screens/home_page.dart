@@ -4,7 +4,6 @@ import 'package:flutter_zfcourier_crud_api/controller/parcel_controller.dart';
 import 'package:flutter_zfcourier_crud_api/models/parcel/list.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:shimmer/shimmer.dart';
 
 import '../../controller/auth_controller.dart';
 import '../../styles/app_colors.dart';

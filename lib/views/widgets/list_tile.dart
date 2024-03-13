@@ -1,4 +1,3 @@
-import 'package:custom_timer/custom_timer.dart';
 import 'package:flutter/material.dart';
 
 import '../../styles/app_colors.dart';

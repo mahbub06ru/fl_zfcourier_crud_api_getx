@@ -1,13 +1,12 @@
 import 'dart:io';
 
-import 'package:app_settings/app_settings.dart';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 import '../../controller/auth_controller.dart';
 import '../../styles/app_colors.dart';

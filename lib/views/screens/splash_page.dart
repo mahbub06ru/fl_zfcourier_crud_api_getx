@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:app_settings/app_settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +12,7 @@ import 'package:get/get.dart';
 import 'dart:async';
 import 'dart:developer' as developer;
 import 'package:get_storage/get_storage.dart';
-import 'package:package_info_plus/package_info_plus.dart';
+
 
 import '../../controller/auth_controller.dart';
 import '../widgets/custom_alert_dialog.dart';
